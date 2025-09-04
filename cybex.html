@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybex Market Analysis</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 2rem;
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .table-container th, .table-container td {
+            padding: 12px 16px;
+        }
+
+        .table-container th {
+            font-weight: 600;
+            color: #e5e7eb;
+            background-color: #374151;
+            border-bottom: 2px solid #4b5563;
+        }
+
+        .table-container tr:nth-child(even) {
+            background-color: #1f2937;
+        }
+
+        .table-container tr:hover {
+            background-color: #374151;
+        }
+        
+        .bar-chart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .bar-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .bar-label {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            font-weight: 500;
+        }
+
+        .bar-wrapper {
+            background-color: #374151;
+            height: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar {
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.5s ease-in-out;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 p-8">
+    <div class="mx-auto w-full max-w-5xl bg-gray-800 rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-[1.01]">
+        <!-- Header Section -->
+        <div class="bg-blue-600 p-6 md:p-8 text-white">
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Cybex Market Analysis</h1>
+            <p class="mt-2 text-blue-100/80 text-sm sm:text-base">
+                Generated: 04-09-2025 | Account: Cybex DE
+            </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-6 md:p-8 space-y-12">
+            <!-- Market Overview -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Market Overview</h2>
+                <div class="bg-gray-700/50 rounded-xl p-6 space-y-2">
+                    <p class="text-sm text-gray-400">
+                        The Cybex market is highly competitive with <span class="text-green-400 font-semibold">115 active retailers</span> tracking <span class="text-green-400 font-semibold">353 unique products</span> across <span class="text-green-400 font-semibold">25 product categories</span>. The market shows a median price point of <span class="text-green-400 font-semibold">285.24 EUR</span> with strong availability (<span class="text-green-400 font-semibold">85% in-stock rate</span> overall).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Market Distribution by Price Segments -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Market Distribution by Price Segments</h2>
+                <div class="bar-chart-container">
+                    <div class="bar-item">
+                        <span class="bar-label">Under 100€ (26 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">100-200€ (53 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">200-300€ (105 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">300-400€ (74 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">400-500€ (47 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">500-700€ (32 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Over 700€ (16 products)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-purple-500" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Market Players Analysis -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Key Market Players Analysis</h2>
+                <div class="bg-gray-700/50 rounded-xl p-6 space-y-4">
+                    <h3 class="font-bold text-lg text-gray-200">Top-Tier Aggressive Competitors</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li><span class="font-semibold text-gray-300">Tradeinn.com:</span> Most aggressive pricer (median 224.00 EUR), frequently cheapest (25 times), 100% stock availability.</li>
+                        <li><span class="font-semibold text-gray-300">Amazon.de:</span> Major player with competitive median pricing (249.95 EUR), strong market presence.</li>
+                        <li><span class="font-semibold text-gray-300">Baby-garage.de:</span> Largest specialist retailer (256 products), very competitive (cheapest 48 times).</li>
+                        <li><span class="font-semibold text-gray-300">Babymarkt.com:</span> Strong competitor, frequently in top 3 cheapest positions.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg text-gray-200 mt-6">Premium Positioning Players:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li><span class="font-semibold text-gray-300">Princess-kinderwagen.de:</span> Premium pricing strategy (median 366.57 EUR).</li>
+                        <li><span class="font-semibold text-gray-300">Kind-der-stadt.de:</span> Premium specialist (median 361.03 EUR).</li>
+                        <li><span class="font-semibold text-gray-300">Wunschkindkoblenz.de:</span> Regional premium player (median 362.32 EUR).</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg text-gray-200 mt-6">Volume Leaders:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li><span class="font-semibold text-gray-300">Babyonlineshop.de:</span> Highest product count (289 products), moderate pricing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Market Opportunities & Challenges -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Market Opportunities & Challenges</h2>
+                <div class="bg-gray-700/50 rounded-xl p-6 space-y-4">
+                    <h3 class="font-bold text-lg text-gray-200">Opportunities:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li><span class="font-semibold text-gray-300">Price Segment Gaps:</span> The 200-300 EUR segment dominates (40% of market) but shows high competition intensity (avg position 7.9), suggesting room for differentiated positioning.</li>
+                        <li><span class="font-semibold text-gray-300">Premium Market Potential:</span> The over 500 EUR segment shows less competitive intensity, indicating opportunities for premium product positioning.</li>
+                        <li><span class="font-semibold text-gray-300">Stock Availability Issues:</span> Several major players have stock challenges (familiebaer.com at 4%, baur.de at 8%), creating market share opportunities.</li>
+                    </ul>
+                    
+                    <h3 class="font-bold text-lg text-gray-200 mt-6">Challenges:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li><span class="font-semibold text-gray-300">Intense Price Competition:</span> Average market position of 5.7 competitors per product indicates saturated competitive landscape.</li>
+                        <li><span class="font-semibold text-gray-300">Aggressive Online Players:</span> Tradeinn.com and other pure online players are driving prices down aggressively.</li>
+                        <li><span class="font-semibold text-gray-300">Market Fragmentation:</span> 115 retailers create complex competitive dynamics with constant price pressure.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Top 10 Most Competitive Retailers -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Top 10 Most Competitive Retailers (by median price)</h2>
+                <div class="bar-chart-container">
+                    <div class="bar-item">
+                        <span class="bar-label">Tradeinn.com (224.00 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Galaxus.de (235.50 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Amazon.de (249.95 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Baby-garage.de (255.75 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Babymarkt.com (268.30 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Babyprofi.de (280.10 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Otto.de (295.40 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Jollyroom.de (305.20 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Baby-walz.de (315.60 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label">Babyone.de (325.80 EUR)</span>
+                        <div class="bar-wrapper">
+                            <div class="bar bg-blue-500" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Recommendations -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-100">Strategic Recommendations</h2>
+                <div class="bg-gray-700/50 rounded-xl p-6 space-y-4">
+                    <h3 class="font-bold text-lg text-gray-200">For Market Entry/Expansion:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li>Focus on the 400-700 EUR premium segment where competition is less intense.</li>
+                        <li>Consider partnerships with high-stock-availability players like Tradeinn or Amazon.</li>
+                        <li>Target regional premium specialists who may have capacity constraints.</li>
+                    </ul>
+                    <h3 class="font-bold text-lg text-gray-200 mt-6">For Competitive Intelligence:</h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                        <li>Monitor Tradeinn.com and Baby-garage.de closely as price leaders.</li>
+                        <li>Track Amazon.de for market trend signals.</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-gray-500 italic">
+                        The Cybex market shows a classic bifurcation between aggressive online price leaders and premium specialist retailers, with significant opportunities in both the premium segment and through superior inventory management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Download Report Button -->
+    <button onclick="downloadReport()" class="fixed bottom-6 right-6 p-4 bg-gray-700 text-white rounded-full shadow-lg transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+    </button>
+
+    <!-- JavaScript for "download" functionality -->
+    <script>
+        function downloadReport() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Cybex_Market_Analysis_Report.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
